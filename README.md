@@ -29,10 +29,6 @@ Para PostgreSQL/MySQL, basta trocar a conexão em `config/database.ts`
 | POST | `/orders` | Cria `{ customerId, items: [{ productId, quantity }] }` |
 | PATCH | `/orders/:id/status` | Altera status `{ status }` |
 
-Resposta paginada: `{ data: [...], meta: { total, perPage, currentPage, lastPage } }`.
-Erros: `{ code, message, errors? }` — 422 (validação/regra de negócio), 404 (não encontrado).
-
-Códigos de regra de negócio: `E_CUSTOMER_NOT_FOUND`, `E_PRODUCT_NOT_FOUND`, `E_INACTIVE_PRODUCT`, `E_INVALID_STATUS_TRANSITION`.
 
 # Gestão de Pedidos — Frontend (Angular 21)
 
